@@ -62,7 +62,7 @@ GET /api/orders/
 
 ## ⚙️ Setup Instructions
 
-git clone https://github.com/your-username/ecommerce-api-django.git  
+https://github.com/akif-ansari12/ecommerce-api-django.git  
 cd ecommerce-api-django  
 
 python -m venv myenv  
@@ -87,8 +87,8 @@ Use Postman/swagger to test API endpoints/.
 
 ## 👨‍💻 Author
 Akif Ansari  
-GitHub: https://github.com/your-username   
-LinkedIn: https://linkedin.com/in/your-profile  
+GitHub: https://github.com/akif-ansari12   
+LinkedIn: https://www.linkedin.com/in/akifansari12/ 
 
 ---
 
