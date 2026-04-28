@@ -1,97 +1,187 @@
-# 🛒 E-commerce API (Django REST Framework)
+# 🛒 E-commerce REST API (Django)
 
 ## 📌 Description
-This is a modular RESTful API for an E-commerce platform built using Django and Django REST Framework.  
-It handles login-based authentication, product management, cart system, and order processing.
+
+A scalable and modular RESTful API for an E-commerce platform built using **Django** and **Django REST Framework**.
+The API supports authentication, product management, cart operations, and order processing with a clean and maintainable architecture.
+
+---
+
+## 🌐 Live Demo
+
+🔗 https://ecommerce-api-django.onrender.com/
 
 ---
 
 ## 🚀 Features
-- User Login Authentication
-- Product CRUD APIs
-- Category Management
-- Cart Functionality
-- Order Processing
-- Modular Django architecture (separate apps)
+
+* 🔐 User Login Authentication (JWT-based)
+* 🛍️ Product CRUD APIs
+* 🗂️ Category Management
+* 🛒 Cart Functionality
+* 📦 Order Processing System
+* 🧩 Modular Django Architecture (separate apps)
+* 📄 API Documentation using Swagger
 
 ---
 
 ## 🛠️ Tech Stack
-- Python
-- Django
-- Django REST Framework
-- SQLite (default)
+
+* Python
+* Django
+* Django REST Framework
+* SQLite (default database)
+* Gunicorn (for production server)
+* Render (for deployment)
 
 ---
 
 ## 📁 Project Structure
 
+```
 ecommerce-api-django/
-- cart/ →      Cart functionality
-- ecommerce/ →   Main project settings
-- orders/ →    Order management
-- products/ →  Product APIs
-- users/ →     Login authentication
-- manage.py
-- requirements.txt
-- .gitignore
+│
+├── cart/        # Cart functionality
+├── ecommerce/  # Main project settings
+├── orders/     # Order management
+├── products/   # Product APIs
+├── users/      # Authentication
+│
+├── manage.py
+├── requirements.txt
+├── Procfile
+└── .gitignore
+```
 
 ---
 
-## 📂 API Endpoints
+## 🔗 API Endpoints
 
-### Authentication
-POST /api/login/
+### 🔐 Authentication
 
-### Products
-GET /api/products/  
-POST /api/products/  
-GET /api/products/{id}/  
-PUT /api/products/{id}/  
-DELETE /api/products/{id}/  
+* `POST /api/login/` → User login
+* `POST /api/refresh/` → Refresh token
 
-### Cart
-GET /api/cart/  
-POST /api/cart/add/  
+---
 
-### Orders
-POST /api/orders/  
-GET /api/orders/  
+### 🛍️ Products
+
+* `GET /api/products/` → List all products
+* `POST /api/products/` → Create product
+* `GET /api/products/{id}/` → Get product details
+* `PUT /api/products/{id}/` → Update product
+* `DELETE /api/products/{id}/` → Delete product
+
+---
+
+### 🛒 Cart
+
+* `GET /api/cart/` → View cart
+* `POST /api/cart/add/` → Add item to cart
+
+---
+
+### 📦 Orders
+
+* `POST /api/order/` → Create order
+* `GET /api/orders/` → Get all orders
+* `GET /api/orders/history/` → Order history
+
+---
+
+### ⚙️ Admin Panel
+
+* `/admin/`
+
+---
+
+### 📄 API Documentation
+
+* `/swagger/`
 
 ---
 
 ## ⚙️ Setup Instructions
 
-https://github.com/akif-ansari12/ecommerce-api-django.git  
-cd ecommerce-api-django  
+### 1. Clone Repository
 
-python -m venv myenv  
+```
+git clone https://github.com/akif-ansari12/ecommerce-api-django.git
+cd ecommerce-api-django
+```
 
-# Activate:
-# Windows
-myenv\Scripts\activate  
+### 2. Create Virtual Environment
 
-# Mac/Linux
-source myenv/bin/activate  
+```
+python -m venv myenv
+```
 
-pip install -r requirements.txt  
-python manage.py migrate  
-python manage.py runserver  
+### 3. Activate Environment
+
+**Windows**
+
+```
+myenv\Scripts\activate
+```
+
+**Mac/Linux**
+
+```
+source myenv/bin/activate
+```
+
+### 4. Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 5. Apply Migrations
+
+```
+python manage.py migrate
+```
+
+### 6. Run Server
+
+```
+python manage.py runserver
+```
 
 ---
 
 ## 🧪 Testing
-Use Postman/swagger to test API endpoints/.
+
+You can test the APIs using:
+
+* Postman
+* Swagger UI (`/swagger/`)
 
 ---
 
 ## 👨‍💻 Author
-Akif Ansari  
-GitHub: https://github.com/akif-ansari12   
-LinkedIn: https://www.linkedin.com/in/akifansari12/ 
+
+**Akif Ansari**
+
+* GitHub: https://github.com/akif-ansari12
+* LinkedIn: https://www.linkedin.com/in/akifansari12/
 
 ---
 
 ## ⭐ Note
-This project currently supports login-only authentication (no registration).
+
+* This project currently supports **login-based authentication only** (no user registration).
+* Root URL (`/`) returns 404 — use `/api/...` endpoints.
+
+---
+
+## 💡 Future Improvements
+
+* User Registration System
+* Payment Gateway Integration
+* PostgreSQL Database
+* Docker Deployment
+* Frontend Integration (React)
+
+---
 
